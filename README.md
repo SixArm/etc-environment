@@ -1,8 +1,8 @@
-# SixArm.com » Unix » <br> /etc/environment files for system configuration
+# SixArm.com » Unix » <br> /etc/environment system configuration
 
-Our Unix systems use `/etc/environment.sh` to set paths, languages, etc. on Debian, Ubuntu, etc.
+Our Unix systems use `/etc/environment` to set paths, languages, etc.
 
-The settings work for all system users, and all shells e.g. bash, zsh, etc.
+Our environment settings are for all system users and all shells e.g. bash, zsh, etc.
 
 See our related repos:
 
