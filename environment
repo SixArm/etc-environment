@@ -33,9 +33,7 @@ OPT=$OPT:/opt/jq
 OPT=$OPT:/opt/packer
 OPT=$OPT:/opt/rbenv/bin
 OPT=$OPT:/opt/redis/current/bin
-OPT=$OPT:/opt/ruby-build/bin
 OPT=$OPT:/opt/rubygems/current/bin
-OPT=$OPT:/opt/rubymine/current/bin
 OPT=$OPT:/opt/sbt/current/bin
 OPT=$OPT:/opt/sublime/current
 OPT=$OPT:/opt/subversion/current/bin
@@ -312,16 +310,31 @@ RBENV_ROOT=~/.rbenv
 
 # Ruby language
 
-OPT="$OPT:/opt/ruby/mri/current/bin"
-OPT="$OPT:/opt/ruby/jruby/current/bin"
+# We put our Ruby in /opt because we want it to be system-wide.
+# We have multiple Ruby virtual machines and multiple verisons.
+#
+# Example:
+#
+#   /opt/ruby/mri/2.1.5
+#   /opt/ruby/jruby/1.7.16.1
+#   /opt/ruby/rbx/2.3.0
+#
+# We link the preferred vm and version this way:
+#
+#   ln -sfn /opt/ruby/mri/2.1.5 /opt/ruby/current
+#
+OPT="$OPT:/opt/ruby/current/bin"
 
-GEM_HOME=/opt/rubygems/mri/current
-GEM_PATH=/opt/rubygems/mri/current
+GEM_HOME="/opt/rubygems/current"
+GEM_PATH="/opt/rubygems/current"
+
 RUBYOPT='-rubygems -rpsych'
 
 ##########################################################################
 
 # RubyMine IDE, which runs on Java
+
+OPT="$OPT:/opt/rubymine/current/bin"
 
 RUBYMINE_JDK=/opt/jdk/current
 
@@ -356,3 +369,4 @@ OPT="$OPT:/opt/X11/bin"
 # Conclusion
 
 PATH="$OPT:$PATH"
+PATH=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/rbenv/bin:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sqlite/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/joel/bin:/Users/joel/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin::/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
