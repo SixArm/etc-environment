@@ -1,3 +1,1 @@
-# Conclusion
-
-PATH="$OPT:$PATH"
+# Conclusion. Put any final steps here.

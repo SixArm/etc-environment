@@ -1,4 +1,14 @@
 # Create the `environment` file by concatenating the `environment.d` files.
 awk 'FNR==1 && NR!=1 {print "\n##########################################################################\n"}{print}' environment.d/*.txt > environment
+
+# Conclude by setting any env vars that are calculated.
+# This is because /etc/environment does not do subsititutions.
 source environment
-echo "PATH=\"$PATH\"" >> environment
+echo "OPT=\"$OPT\""                             >> environment
+echo "PATH=\"$PATH\""                           >> environment
+echo "MANPATH=\"$MANPATH\""                     >> environment
+echo "LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH\""     >> environment
+echo "LD_RUN_PATH=\"$LD_RUN_PATH\""             >> environment
+echo "LDFLAGS=\"$LDFLAGS\""                     >> environment
+echo "CPPFLAGS=\"$CPPFLAGS\""                   >> environment
+echo "DYLD_LIBRARY_PATH=\"$DYLD_LIBARY_PATH\""  >> environment
