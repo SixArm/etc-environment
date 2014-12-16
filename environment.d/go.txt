@@ -20,7 +20,7 @@
 #   else on your system then you must set $GOROOT to the location you chose.
 #GOROOT=/opt/go/current
 
-# GOPATH is the path to our go workspace.
+# GOPATH is the path to our system-wide go workspace.
 #
 # Go will know where to install binaries as GOPATH/{bin, pkg, src}.
 #
@@ -29,7 +29,9 @@
 #
 # Set a GOPATH to use goinstall to build and install your own code and
 # external libraries outside of the Go tree (and to avoid writing Makefiles)
-GOPATH=$HOME/go
+#
+# Our system users may want to set their own GOPATH, to override this one.
+GOPATH=/opt/go/current
 
 # Go binary directory
 #
