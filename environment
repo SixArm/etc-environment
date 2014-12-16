@@ -30,23 +30,12 @@ OPT=
 #OPT=$OPT:/opt/gcc/current/bin
 #OPT=$OPT:/opt/jq
 #OPT=$OPT:/opt/packer
-#OPT=$OPT:/opt/rbenv/bin
 #OPT=$OPT:/opt/redis/current/bin
 #OPT=$OPT:/opt/rubygems/current/bin
 #OPT=$OPT:/opt/sbt/current/bin
 #OPT=$OPT:/opt/sublime/current
 #OPT=$OPT:/opt/subversion/current/bin
 #OPT=$OPT:/opt/vim/current/bin
-#OPT=$OPT:/opt/sixarm_debian_dpkg_scripts
-#OPT=$OPT:/opt/sixarm_gem_scripts
-#OPT=$OPT:/opt/sixarm_git_gitconfig
-#OPT=$OPT:/opt/sixarm_htx
-#OPT=$OPT:/opt/sixarm_mysql_scripts
-#OPT=$OPT:/opt/sixarm_postgresql_scripts
-#OPT=$OPT:/opt/sixarm_ruby_gem_scripts
-#OPT=$OPT:/opt/sixarm_ruby_gemforge
-#OPT=$OPT:/opt/sixarm_strategem
-#OPT=$OPT:/opt/sixarm_unix_shell_scripts
 
 ##########################################################################
 
@@ -365,6 +354,21 @@ RUBYMINE_JDK=/opt/jdk/current
 
 ##########################################################################
 
+# SixArm.com repositories
+
+#OPT=$OPT:/opt/sixarm_debian_dpkg_scripts
+#OPT=$OPT:/opt/sixarm_gem_scripts
+#OPT=$OPT:/opt/sixarm_git_gitconfig
+#OPT=$OPT:/opt/sixarm_htx
+#OPT=$OPT:/opt/sixarm_mysql_scripts
+#OPT=$OPT:/opt/sixarm_postgresql_scripts
+#OPT=$OPT:/opt/sixarm_ruby_gem_scripts
+#OPT=$OPT:/opt/sixarm_ruby_gemforge
+#OPT=$OPT:/opt/sixarm_strategem
+#OPT=$OPT:/opt/sixarm_unix_shell_scripts
+
+##########################################################################
+
 # SQLite database
 
 #OPT="$OPT:/opt/sqlite/current/bin"
@@ -395,8 +399,8 @@ TERM=xterm-256color
 
 #PATH="$OPT:$PATH"
 
-OPT=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/rbenv/bin:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sqlite/current/bin:/opt/X11/bin"
-PATH=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/rbenv/bin:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sqlite/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
+OPT=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/X11/bin"
+PATH=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
 MANPATH=":/usr/local/pgsql/man"
 LD_LIBRARY_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib:"
 LD_RUN_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/opt/sqlite/current/lib"
