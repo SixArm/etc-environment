@@ -3,4 +3,3 @@
 # We create an OPT variable to make it easy to set or unset these.
 
 OPT=
-OPT=$OPT:/opt/packer
