@@ -12,4 +12,3 @@ OPT=$OPT:/opt/rubygems/current/bin
 OPT=$OPT:/opt/sbt/current/bin
 OPT=$OPT:/opt/sublime/current
 OPT=$OPT:/opt/subversion/current/bin
-OPT=$OPT:/opt/vim/current/bin
