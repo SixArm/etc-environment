@@ -4,7 +4,6 @@
 
 OPT=
 OPT=$OPT:/opt/ec2-api-tools/current/bin
-OPT=$OPT:/opt/gcc/current/bin
 OPT=$OPT:/opt/jq
 OPT=$OPT:/opt/packer
 OPT=$OPT:/opt/rubygems/current/bin
