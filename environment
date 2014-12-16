@@ -16,9 +16,8 @@
 #      /usr/local/bin,sbin
 #      /usr/bin,sbin
 #      /bin,sbin
-#      ~/bin,sbin
-
-PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/bin:$HOME/sbin
+#
+PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 
 ##########################################################################
 
@@ -27,27 +26,27 @@ PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/bin:$HOM
 # We create an OPT variable to make it easy to set or unset these.
 
 OPT=
-OPT=$OPT:/opt/ec2-api-tools/current/bin
-OPT=$OPT:/opt/gcc/current/bin
-OPT=$OPT:/opt/jq
-OPT=$OPT:/opt/packer
-OPT=$OPT:/opt/rbenv/bin
-OPT=$OPT:/opt/redis/current/bin
-OPT=$OPT:/opt/rubygems/current/bin
-OPT=$OPT:/opt/sbt/current/bin
-OPT=$OPT:/opt/sublime/current
-OPT=$OPT:/opt/subversion/current/bin
-OPT=$OPT:/opt/vim/current/bin
-OPT=$OPT:/opt/sixarm_debian_dpkg_scripts
-OPT=$OPT:/opt/sixarm_gem_scripts
-OPT=$OPT:/opt/sixarm_git_gitconfig
-OPT=$OPT:/opt/sixarm_htx
-OPT=$OPT:/opt/sixarm_mysql_scripts
-OPT=$OPT:/opt/sixarm_postgresql_scripts
-OPT=$OPT:/opt/sixarm_ruby_gem_scripts
-OPT=$OPT:/opt/sixarm_ruby_gemforge
-OPT=$OPT:/opt/sixarm_strategem
-OPT=$OPT:/opt/sixarm_unix_shell_scripts
+#OPT=$OPT:/opt/ec2-api-tools/current/bin
+#OPT=$OPT:/opt/gcc/current/bin
+#OPT=$OPT:/opt/jq
+#OPT=$OPT:/opt/packer
+#OPT=$OPT:/opt/rbenv/bin
+#OPT=$OPT:/opt/redis/current/bin
+#OPT=$OPT:/opt/rubygems/current/bin
+#OPT=$OPT:/opt/sbt/current/bin
+#OPT=$OPT:/opt/sublime/current
+#OPT=$OPT:/opt/subversion/current/bin
+#OPT=$OPT:/opt/vim/current/bin
+#OPT=$OPT:/opt/sixarm_debian_dpkg_scripts
+#OPT=$OPT:/opt/sixarm_gem_scripts
+#OPT=$OPT:/opt/sixarm_git_gitconfig
+#OPT=$OPT:/opt/sixarm_htx
+#OPT=$OPT:/opt/sixarm_mysql_scripts
+#OPT=$OPT:/opt/sixarm_postgresql_scripts
+#OPT=$OPT:/opt/sixarm_ruby_gem_scripts
+#OPT=$OPT:/opt/sixarm_ruby_gemforge
+#OPT=$OPT:/opt/sixarm_strategem
+#OPT=$OPT:/opt/sixarm_unix_shell_scripts
 
 ##########################################################################
 
@@ -60,49 +59,49 @@ EC2_HOME=/opt/ec2-api-tools/current
 # Android
 
 ANDROID_HOME=/opt/android-sdk
-PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+#PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 ##########################################################################
 
 # Emacs
 
-OPT="$OPT:/opt/emacs/current/bin"
+#OPT="$OPT:/opt/emacs/current/bin"
 
 ##########################################################################
 
 # Games, in the typical Linux setup
 
-PATH=$PATH:/usr/games
+#PATH=$PATH:/usr/games
 
 ##########################################################################
 
 # Git mainline to have up-to-date git scripts.
 # Feel free to move it somewhere better for you.
 
-PATH="$PATH:/home/sources/git/mainline/bin"
+#PATH="$PATH:/home/sources/git/mainline/bin"
 
 ##########################################################################
 
 # Go programming language
 
-# GOROOT: the root of the Go tree, often $HOME/go.
+## GOROOT: the root of the Go tree, often $HOME/go.
 #
 # Default is the parent of the directory where all.bash is run.
 #
-# If you choose not to set $GOROOT, you must run gomake instead of make or
+## If you choose not to set $GOROOT, you must run gomake instead of make or
 # gmake when developing Go programs using the conventional makefiles.
 #
-# There are only two cases that where you may have to set $GOROOT.
+## There are only two cases that where you may have to set $GOROOT.
 #
 #  * You are a Linux, FreeBSD or OS X user using the the zip or tarball
 #    binary downloads from the golang.org website. These binaries have
-#    a $GOROOT value of /usr/local/go and recommend you unpack them into
-#    that location. If you choose not to do this, then you must set $GOROOT
+##    a $GOROOT value of /usr/local/go and recommend you unpack them into
+##    that location. If you choose not to do this, then you must set $GOROOT
 #    to the location you chose.
 #
 #  * You are a Windows user using the zip binary download from golang.org.
-#    These binaries have a $GOROOT value of C:\Go. If you place Go somewhere
-#   else on your system then you must set $GOROOT to the location you chose.
+##    These binaries have a $GOROOT value of C:\Go. If you place Go somewhere
+##   else on your system then you must set $GOROOT to the location you chose.
 #GOROOT=/opt/go/current
 
 # GOPATH is the path to our system-wide go workspace.
@@ -127,7 +126,7 @@ GOPATH=/opt/go/current
 # installed Go binaries/programs. In most cases, you do not.
 #GOBIN=/opt/go/current/bin
 
-PATH="$PATH:$HOME/go/bin"
+#PATH="$PATH:$HOME/go/bin"
 
 ##########################################################################
 
@@ -141,7 +140,7 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 
 # Java language
 
-OPT="$OPT:/opt/java/jdk/current/bin"
+#OPT="$OPT:/opt/java/jdk/current/bin"
 
 JAVA_HOME=/opt/java/jdk/current/bin/java
 JDK_HOME=/opt/java/jdk/current
@@ -206,9 +205,9 @@ JRUBY_LD_RUN_PATH="/opt/ruby/jruby/current/lib"
 JRUBY_LDFLAGS="-L/opt/jruby/current/lib"
 
 # Append
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JRUBY_LD_LIBRARY_PATH"
-LD_RUN_PATH="$LD_RUN_PATH:$JRUBY_LD_RUN_PATH"
-LDFLAGS="$LDFLAGS $JRUBY_LDFLAGS"
+#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JRUBY_LD_LIBRARY_PATH"
+#LD_RUN_PATH="$LD_RUN_PATH:$JRUBY_LD_RUN_PATH"
+#LDFLAGS="$LDFLAGS $JRUBY_LDFLAGS"
 
 ##########################################################################
 
@@ -276,9 +275,9 @@ LC_ALL=en_US.UTF-8
 #     The 'perl' binary won't run until its shared libraries are installed,
 #     unless LD_LIBRARY_PATH is used to bootstrap the process.
 
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib"
-LD_RUN_PATH="$LD_RUN_PATH:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
-LDFLAGS="$LDFLAGS -L/opt/gmp/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib"
+#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib"
+#LD_RUN_PATH="$LD_RUN_PATH:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
+#LDFLAGS="$LDFLAGS -L/opt/gmp/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib"
 
 ##########################################################################
 
@@ -289,20 +288,20 @@ LLVM_LDFLAGS="-L/usr/local/opt/llvm/lib"
 LLVM_CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # Append
-CPPFLAGS="$CPPFLAGS $LLVM_CPPFLAGS"
-LDFLAGS="$LDFLAGS $LLVM_LDFLAGS"
+#CPPFLAGS="$CPPFLAGS $LLVM_CPPFLAGS"
+#LDFLAGS="$LDFLAGS $LLVM_LDFLAGS"
 
 ##########################################################################
 
 # Nagios monitoring software
 
-PATH="$PATH:/usr/lib/nagios/plugins"
+#PATH="$PATH:/usr/lib/nagios/plugins"
 
 ##########################################################################
 
 # Node JS
 
-OPT="$OPT:/opt/node/current/bin"
+#OPT="$OPT:/opt/node/current/bin"
 
 ##########################################################################
 
@@ -310,21 +309,21 @@ OPT="$OPT:/opt/node/current/bin"
 
 ORACLE_HOME=/opt/oracle/instantclient
 NLS_LANG=AMERICAN_AMERICA.UTF8
-DYLD_LIBRARY_PATH=$ORACLE_HOME
+#DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 ##########################################################################
 
 # Postgres database
 
-PATH="$PATH:/usr/local/pgsql/bin"
-MANPATH="$MANPATH:/usr/local/pgsql/man"
+#PATH="$PATH:/usr/local/pgsql/bin"
+#MANPATH="$MANPATH:/usr/local/pgsql/man"
 
 ##########################################################################
 
 # Qt cross-platform application and UI framework.
 # We put it in an arbitrary place; move it where you want.
 
-PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
+#PATH=$PATH:/usr/local/Trolltech/Qt-4.7.4/bin
 
 ##########################################################################
 
@@ -349,7 +348,7 @@ RBENV_ROOT=~/.rbenv
 #
 #   ln -sfn /opt/ruby/mri/2.1.5 /opt/ruby/current
 #
-OPT="$OPT:/opt/ruby/current/bin"
+#OPT="$OPT:/opt/ruby/current/bin"
 
 GEM_HOME="/opt/rubygems/current"
 GEM_PATH="/opt/rubygems/current"
@@ -360,7 +359,7 @@ RUBYOPT='-rubygems -rpsych'
 
 # RubyMine IDE, which runs on Java
 
-OPT="$OPT:/opt/rubymine/current/bin"
+#OPT="$OPT:/opt/rubymine/current/bin"
 
 RUBYMINE_JDK=/opt/jdk/current
 
@@ -368,15 +367,15 @@ RUBYMINE_JDK=/opt/jdk/current
 
 # SQLite database
 
-OPT="$OPT:/opt/sqlite/current/bin"
+#OPT="$OPT:/opt/sqlite/current/bin"
 
 SQLITE_LD_LIBRARY_PATH="/opt/sqlite/current/lib"
 SQLITE_LD_RUN_PATH="/opt/sqlite/current/lib"
 SQLITE_LDFLAGS="-L/opt/sqlite/current/lib"
 
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$SQLITE_LD_FLAGS"
-LD_RUN_PATH="$LD_RUN_PATH:$SQLITE_LD_RUN_PATH"
-LDFLAGS="$LDFLAGS $SQLITE_LDFLAGS"
+#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$SQLITE_LD_FLAGS"
+#LD_RUN_PATH="$LD_RUN_PATH:$SQLITE_LD_RUN_PATH"
+#LDFLAGS="$LDFLAGS $SQLITE_LDFLAGS"
 
 ##########################################################################
 
@@ -388,16 +387,19 @@ TERM=xterm-256color
 
 # X11 X Window System
 
-OPT="$OPT:/opt/X11/bin"
+#OPT="$OPT:/opt/X11/bin"
 
 ##########################################################################
 
 # Conclusion. Put any final steps here.
+
+#PATH="$OPT:$PATH"
+
 OPT=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/rbenv/bin:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sqlite/current/bin:/opt/X11/bin"
-PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/Users/joel/bin:/Users/joel/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
+PATH=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/rbenv/bin:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sqlite/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
 MANPATH=":/usr/local/pgsql/man"
 LD_LIBRARY_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib:"
 LD_RUN_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/opt/sqlite/current/lib"
 LDFLAGS=" -L/opt/jruby/current/lib -L/opt/gmp/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib -L/usr/local/opt/llvm/lib -L/opt/sqlite/current/lib"
 CPPFLAGS=" -I/usr/local/opt/llvm/include"
-DYLD_LIBRARY_PATH=""
+DYLD_LIBRARY_PATH="/opt/oracle/instantclient"
