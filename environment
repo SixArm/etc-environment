@@ -403,3 +403,4 @@ LD_RUN_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/c
 LDFLAGS=" -L/opt/jruby/current/lib -L/opt/gmp/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib -L/usr/local/opt/llvm/lib -L/opt/sqlite/current/lib"
 CPPFLAGS=" -I/usr/local/opt/llvm/include"
 DYLD_LIBRARY_PATH="/opt/oracle/instantclient"
+
