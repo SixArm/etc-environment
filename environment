@@ -26,16 +26,6 @@ PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
 # We create an OPT variable to make it easy to set or unset these.
 
 OPT=
-#OPT=$OPT:/opt/ec2-api-tools/current/bin
-#OPT=$OPT:/opt/gcc/current/bin
-#OPT=$OPT:/opt/jq
-#OPT=$OPT:/opt/packer
-#OPT=$OPT:/opt/redis/current/bin
-#OPT=$OPT:/opt/rubygems/current/bin
-#OPT=$OPT:/opt/sbt/current/bin
-#OPT=$OPT:/opt/sublime/current
-#OPT=$OPT:/opt/subversion/current/bin
-#OPT=$OPT:/opt/vim/current/bin
 
 ##########################################################################
 
@@ -52,6 +42,12 @@ ANDROID_HOME=/opt/android-sdk
 
 ##########################################################################
 
+# Amazon Web Services
+
+#OPT=$OPT:/opt/ec2-api-tools/current/bin
+
+##########################################################################
+
 # Emacs
 
 #OPT="$OPT:/opt/emacs/current/bin"
@@ -61,6 +57,12 @@ ANDROID_HOME=/opt/android-sdk
 # Games, in the typical Linux setup
 
 #PATH=$PATH:/usr/games
+
+##########################################################################
+
+# GCC
+
+#OPT="$OPT:/opt/gcc/current/bin"
 
 ##########################################################################
 
@@ -133,6 +135,12 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 
 JAVA_HOME=/opt/java/jdk/current/bin/java
 JDK_HOME=/opt/java/jdk/current
+
+##########################################################################
+
+# JQ JSON processor
+
+#OPT="$OPT:/opt/jq"
 
 ##########################################################################
 
@@ -302,6 +310,12 @@ NLS_LANG=AMERICAN_AMERICA.UTF8
 
 ##########################################################################
 
+# Packer
+
+#OPT="$OPT:/opt/packer"
+
+##########################################################################
+
 # Postgres database
 
 #PATH="$PATH:/usr/local/pgsql/bin"
@@ -322,6 +336,12 @@ RBENV_ROOT=~/.rbenv
 
 ##########################################################################
 
+# Redis database
+
+#OPT=$OPT:/opt/redis/current/bin
+
+##########################################################################
+
 # Ruby language
 
 # We put our Ruby in /opt because we want it to be system-wide.
@@ -337,7 +357,18 @@ RBENV_ROOT=~/.rbenv
 #
 #   ln -sfn /opt/ruby/mri/2.1.5 /opt/ruby/current
 #
+# We put our Ruby gems in a similar kind of setup:
+#
+#   /opt/rubygems/mri/2.1.5
+#   /opt/rubygems/jruby/1.7.16.1
+#   /opt/rubgemsy/rbx/2.3.0
+#
+# We link the preferred vm and version this way:
+#
+#   ln -sfn /opt/rubygems/mri/2.1.5 /opt/rubygems/current
+#
 #OPT="$OPT:/opt/ruby/current/bin"
+#OPT="$OPT:/opt/rubygems/current/bin"
 
 GEM_HOME="/opt/rubygems/current"
 GEM_PATH="/opt/rubygems/current"
@@ -351,6 +382,12 @@ RUBYOPT='-rubygems -rpsych'
 #OPT="$OPT:/opt/rubymine/current/bin"
 
 RUBYMINE_JDK=/opt/jdk/current
+
+##########################################################################
+
+# SBT
+
+#OPT="$OPT:/opt/sbt/current/bin"
 
 ##########################################################################
 
@@ -383,9 +420,27 @@ SQLITE_LDFLAGS="-L/opt/sqlite/current/lib"
 
 ##########################################################################
 
+# Sublime editor
+
+#OPT=$OPT:/opt/sublime/current
+
+##########################################################################
+
+# Subversion source code management
+
+#OPT=$OPT:/opt/subversion/current/bin
+
+##########################################################################
+
 # Set terminal to use 256 colors
 
 TERM=xterm-256color
+
+##########################################################################
+
+# Vim editor
+
+#OPT=$OPT:/opt/vim/current/bin
 
 ##########################################################################
 
@@ -399,8 +454,8 @@ TERM=xterm-256color
 
 #PATH="$OPT:$PATH"
 
-OPT=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/X11/bin"
-PATH=":/opt/ec2-api-tools/current/bin:/opt/gcc/current/bin:/opt/jq:/opt/packer:/opt/redis/current/bin:/opt/rubygems/current/bin:/opt/sbt/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/emacs/current/bin:/opt/java/jdk/current/bin:/opt/node/current/bin:/opt/ruby/current/bin:/opt/rubymine/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
+OPT=":/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/X11/bin"
+PATH=":/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm_debian_dpkg_scripts:/opt/sixarm_gem_scripts:/opt/sixarm_git_gitconfig:/opt/sixarm_htx:/opt/sixarm_mysql_scripts:/opt/sixarm_postgresql_scripts:/opt/sixarm_ruby_gem_scripts:/opt/sixarm_ruby_gemforge:/opt/sixarm_strategem:/opt/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/vim/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/usr/local/pgsql/bin:/usr/local/Trolltech/Qt-4.7.4/bin"
 MANPATH=":/usr/local/pgsql/man"
 LD_LIBRARY_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib:"
 LD_RUN_PATH=":/opt/ruby/jruby/current/lib:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/opt/sqlite/current/lib"
