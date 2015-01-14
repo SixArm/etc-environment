@@ -5,6 +5,6 @@
 # This file sets the default PATH, load paths, language, history,
 # and application-specific variables for Go, Java, Ruby, etc.
 #
-# To build this file, run environment.sh in the directory above.
+# To build this file, run environment-generate in the directory above.
 #
 ##

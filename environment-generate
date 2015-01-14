@@ -1,19 +1,34 @@
-# Create the `environment` file by concatenating the `environment.d` files.
+##
+# Generate the `environment` file based on the `environment.d` files.
+#
+# Generally this script concatenations the files,
+# then does some simple transformation to flatten calculations.
+##
+
+set -o nounset
+set -o errexit
+set -o pipefail
+
+# Concatenate the files
 awk 'FNR==1 && NR!=1 {print "\n##########################################################################\n"}{print}' environment.d/*.sh > environment
 
 # Conclude by setting any env vars that are calculated.
 # This is because /etc/environment does not do subsititutions.
+#
+# We trim any leading colon from each paths because the leading colon
+# is an artifact of the calculation and mustn't be in the actual path.
+#
 source environment
 echo "
-OPT=\"$OPT\"
-PATH=\"$PATH\"
-MANPATH=\"$MANPATH\"
-LD_LIBRARY_PATH=\"$LD_LIBRARY_PATH\"
-LD_RUN_PATH=\"$LD_RUN_PATH\"
+OPT=\"${OPT/#:/}\"
+PATH=\"${PATH/#:/}\"
+MANPATH=\"${MANPATH/#:/}\"
+LD_LIBRARY_PATH=\"${LD_LIBRARY_PATH/#:/}\"
+LD_RUN_PATH=\"${LD_RUN_PATH/#:/}\"
 LDFLAGS=\"$LDFLAGS\"
 CPPFLAGS=\"$CPPFLAGS\"
-DYLD_LIBRARY_PATH=\"$DYLD_LIBRARY_PATH\"
+DYLD_LIBRARY_PATH=\"${DYLD_LIBRARY_PATH/#://}\"
 " >> environment
 
-# Comment-out lines that are calculations
-sed -i 's/^[ \t]*\(OPT\|PATH\|MANPATH\|LD_LIBRARY_PATH\|LD_RUN_PATH\|LDFLAGS\|CPPFLAGS\|DYLD_LIBRARY_PATH\)[ \t]*=/#&/g' environment
+# Comment-out lines that are known calculations
+sed -i 's/^[ \t]*\(OPT\|PATH\|MANPATH\|LD_LIBRARY_PATH\|LD_RUN_PATH\|LDFLAGS\|CPPFLAGS\|DYLD_LIBRARY_PATH\)[ \t]*=.*\$/#&/g' environment

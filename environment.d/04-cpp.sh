@@ -1,0 +1,3 @@
+# C++ compiler flags
+
+CPPFLAGS=

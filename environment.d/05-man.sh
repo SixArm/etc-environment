@@ -1,0 +1,3 @@
+# Manual pages
+
+MANPATH=

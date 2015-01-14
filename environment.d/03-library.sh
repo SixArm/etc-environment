@@ -53,6 +53,6 @@
 #     The 'perl' binary won't run until its shared libraries are installed,
 #     unless LD_LIBRARY_PATH is used to bootstrap the process.
 
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib:/lib32:/usr/lib32:/usr/local/pgsql/lib"
-LD_RUN_PATH="$LD_RUN_PATH:/opt/gmp/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
-LDFLAGS="$LDFLAGS -L/opt/gmp/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib"
+LD_LIBRARY_PATH="/usr/lib32"
+LD_RUN_PATH=
+LDFLAGS=
