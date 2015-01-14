@@ -1,4 +1,4 @@
-# SixArm.com » Unix » <br> /etc/environment system configuration
+# SixArm.com » Unix » <br> environment configuration
 
 Our Unix systems use `/etc/environment` to set paths, languages, etc.
 
