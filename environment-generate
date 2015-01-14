@@ -15,5 +15,5 @@ CPPFLAGS=\"$CPPFLAGS\"
 DYLD_LIBRARY_PATH=\"$DYLD_LIBRARY_PATH\"
 " >> environment
 
-# Comment-out any lines that have calculations
-sed -i 's/.*\$.*/#&/g' environment
+# Comment-out lines that are calculations
+sed -i 's/^[ \t]*\(OPT\|PATH\|MANPATH\|LD_LIBRARY_PATH\|LD_RUN_PATH\|LDFLAGS\|CPPFLAGS\|DYLD_LIBRARY_PATH\)[ \t]*=/#&/g' environment
