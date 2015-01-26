@@ -15,9 +15,9 @@ awk 'FNR==1 && NR!=1 {print "\n#################################################
 # Conclude by setting any env vars that are calculated.
 # This is because /etc/environment does not do subsititutions.
 #
-# We trim any leading colon from each paths because the leading colon
-# is an artifact of the calculation and mustn't be in the actual path.
-#
+# We trim any leading colon or space from each calculated var,
+# because the characters are merely artifacts of the calculation.
+
 source environment
 echo "
 OPT=\"${OPT/#:/}\"
@@ -25,8 +25,8 @@ PATH=\"${PATH/#:/}\"
 MANPATH=\"${MANPATH/#:/}\"
 LD_LIBRARY_PATH=\"${LD_LIBRARY_PATH/#:/}\"
 LD_RUN_PATH=\"${LD_RUN_PATH/#:/}\"
-LDFLAGS=\"$LDFLAGS\"
-CPPFLAGS=\"$CPPFLAGS\"
+LDFLAGS=\"${LDFLAGS/# //}\"
+CPPFLAGS=\"${CPPFLAGS/# /}\"
 DYLD_LIBRARY_PATH=\"${DYLD_LIBRARY_PATH/#://}\"
 " >> environment
 
