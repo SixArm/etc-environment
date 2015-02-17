@@ -1,3 +1,3 @@
 # Manual pages
 
-MANPATH=
+MANPATH=/usr/local/man
