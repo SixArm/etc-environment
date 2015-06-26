@@ -1,7 +1,8 @@
 # SixArm.com repositories
 
 OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
-OPT=$OPT:/opt/sixarm/sixarm_debian_dpkg_scripts
+OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
+OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
 OPT=$OPT:/opt/sixarm/sixarm_gem_scripts
 OPT=$OPT:/opt/sixarm/sixarm_git_gitconfig
 OPT=$OPT:/opt/sixarm/sixarm_htx
