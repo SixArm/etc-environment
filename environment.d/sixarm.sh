@@ -1,12 +1,12 @@
 # SixArm.com repositories
 
+OPT=$OPT:/opt/sixarm/gitconfig
+OPT=$OPT:/opt/sixarm/gpg-decrypt
+OPT=$OPT:/opt/sixarm/gpg-encrypt
 OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
 OPT=$OPT:/opt/sixarm/sixarm_gem_scripts
-OPT=$OPT:/opt/sixarm/gitconfig
-OPT=$OPT:/opt/sixarm/git-decrypt
-OPT=$OPT:/opt/sixarm/git-encrypt
 OPT=$OPT:/opt/sixarm/sixarm_htx
 OPT=$OPT:/opt/sixarm/sixarm_mysql_scripts
 OPT=$OPT:/opt/sixarm/sixarm_postgresql_scripts
