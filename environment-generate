@@ -12,11 +12,20 @@ set -o pipefail
 # Concatenate the files
 awk 'FNR==1 && NR!=1 {print "\n##########################################################################\n"}{print}' environment.d/*.sh > environment
 
-# Conclude by setting any env vars that are calculated.
+# Now that we have the concatenated environment,
+# we source it, to create various environment variables.
+# Caveat: this changes the current system environment.
+#
+# We conclude by setting any env vars that are calculated,
+# and writing the setting into the output environment file.
 # This is because /etc/environment does not do subsititutions.
 #
 # We trim any leading colon or space from each calculated var,
 # because the characters are merely artifacts of the calculation.
+#
+# TODO: parse these files, without needing to `source environment`;
+# this upgrade will enable us to create the environment file
+# without needed to change the current system environment.
 
 source environment
 echo "
