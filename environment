@@ -140,6 +140,10 @@ CASSANDRA_HOME=~/cassandra
 
 ##########################################################################
 
+export FINDER="rg"
+
+##########################################################################
+
 # Games, in the typical Linux setup
 
 #PATH=$PATH:/usr/games
@@ -155,6 +159,7 @@ CASSANDRA_HOME=~/cassandra
 # Git mainline to have up-to-date git scripts.
 # Feel free to move it somewhere better for you.
 
+export GIT="git"
 #PATH="$PATH:/home/sources/git/mainline/bin"
 
 ##########################################################################
@@ -339,6 +344,10 @@ JRUBY_LDFLAGS="-L/opt/jruby/current/lib"
 #LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JRUBY_LD_LIBRARY_PATH"
 #LD_RUN_PATH="$LD_RUN_PATH:$JRUBY_LD_RUN_PATH"
 #LDFLAGS="$LDFLAGS $JRUBY_LDFLAGS"
+
+##########################################################################
+
+export JUMPER="cd ~/.jump/"
 
 ##########################################################################
 
