@@ -1,0 +1,1 @@
+export JUMPER="cd ~/.jump/"
