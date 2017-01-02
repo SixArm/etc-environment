@@ -5,7 +5,6 @@
 #
 #    LDFLAGS: -L/usr/local/opt/libpcap/lib
 #    CPPFLAGS: -I/usr/local/opt/libpcap/include
-#    PKG_CONFIG_PATH: /usr/local/opt/libpcap/lib/pkgconfig
 #
 # If you use cross-platform libpcap and cross-platform /etc/environment,
 # such as macOS with brew, and Linux, and this specific environment file,

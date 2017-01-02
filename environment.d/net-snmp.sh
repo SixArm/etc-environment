@@ -5,7 +5,6 @@
 #
 #    LDFLAGS: -L/usr/local/opt/net-snmp/lib
 #    CPPFLAGS: -I/usr/local/opt/net-snmp/include
-#    PKG_CONFIG_PATH: /usr/local/opt/net-snmp/lib/pkgconfig
 #
 # If you use cross-platform net-snmp and cross-platform /etc/environment,
 # such as macOS with brew, and Linux, and this specific environment file,

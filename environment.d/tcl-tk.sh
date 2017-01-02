@@ -16,12 +16,13 @@
 #     ln -s /usr/local/opt/tcl-tk /opt/tcl-tk/current
 
 X="/opt/tcl-tk/current"
-OPT="$OPT:$X/bin"
 
+TCL_TK_BIN="$X/bin"
 TCL_TK_CPPFLAGS="-I$X/include"
 TCL_TK_LDFLAGS="-L/$X/lib"
 TCL_TK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
+OPT="$OPT:$TCL_TK_BIN"
 CPPFLAGS="$CPPFLAGS $TCL_TK_CPPFLAGS"
 LDFLAGS="$LDFLAGS $TCL_TK_LDFLAGS"
 PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$TCL_TK_PKG_CONFIG_PATH"

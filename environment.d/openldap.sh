@@ -5,7 +5,6 @@
 #
 #    LDFLAGS: -L/usr/local/opt/openldap/lib
 #    CPPFLAGS: -I/usr/local/opt/openldap/include
-#    PKG_CONFIG_PATH: /usr/local/opt/openldap/lib/pkgconfig
 #
 # If you use cross-platform openldap and cross-platform /etc/environment,
 # such as macOS with brew, and Linux, and this specific environment file,
