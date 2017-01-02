@@ -402,7 +402,6 @@ LAPACK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 #
 #    LDFLAGS: -L/usr/local/opt/libpcap/lib
 #    CPPFLAGS: -I/usr/local/opt/libpcap/include
-#    PKG_CONFIG_PATH: /usr/local/opt/libpcap/lib/pkgconfig
 #
 # If you use cross-platform libpcap and cross-platform /etc/environment,
 # such as macOS with brew, and Linux, and this specific environment file,
@@ -494,6 +493,7 @@ NCURSES_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
 #CPPFLAGS="$CPPFLAGS $NCURSES_CPPFLAGS"
 #LDFLAGS="$LDFLAGS $NCURSES_LDFLAGS"
+#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$NCURSES_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -504,7 +504,6 @@ NCURSES_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 #
 #    LDFLAGS: -L/usr/local/opt/net-snmp/lib
 #    CPPFLAGS: -I/usr/local/opt/net-snmp/include
-#    PKG_CONFIG_PATH: /usr/local/opt/net-snmp/lib/pkgconfig
 #
 # If you use cross-platform net-snmp and cross-platform /etc/environment,
 # such as macOS with brew, and Linux, and this specific environment file,
@@ -537,7 +536,6 @@ NET_SNMP_LDFLAGS="-L$X/lib"
 #
 #    LDFLAGS: -L/usr/local/opt/openldap/lib
 #    CPPFLAGS: -I/usr/local/opt/openldap/include
-#    PKG_CONFIG_PATH: /usr/local/opt/openldap/lib/pkgconfig
 #
 # If you use cross-platform openldap and cross-platform /etc/environment,
 # such as macOS with brew, and Linux, and this specific environment file,
@@ -751,12 +749,13 @@ SQLITE_PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 #     ln -s /usr/local/opt/tcl-tk /opt/tcl-tk/current
 
 X="/opt/tcl-tk/current"
-#OPT="$OPT:$X/bin"
 
+TCL_TK_BIN="$X/bin"
 TCL_TK_CPPFLAGS="-I$X/include"
 TCL_TK_LDFLAGS="-L/$X/lib"
 TCL_TK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
+#OPT="$OPT:$TCL_TK_BIN"
 #CPPFLAGS="$CPPFLAGS $TCL_TK_CPPFLAGS"
 #LDFLAGS="$LDFLAGS $TCL_TK_LDFLAGS"
 #PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$TCL_TK_PKG_CONFIG_PATH"
@@ -835,6 +834,6 @@ LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/us
 LD_RUN_PATH="/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
 LDFLAGS="-L/usr/local/pgsql/lib  -L/opt/gmp/current/lib -L/opt/jruby/current/lib -L//opt/lapack/current/lib -L/opt/libpcap/current/lib -L/opt/libxslt/current/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib -L/opt/ncurses/current/lib -L/opt/net-snmp/current/lib -L/opt/openldap/current/lib -L/opt/sqlite/current/lib -L/opt/subversion/current/lib -L//opt/tcl-tk/current/lib -L//opt/texinfo/current/lib -L/opt/yaml/current/lib"
 CPPFLAGS="-I/opt/lapack/current/include -I/opt/libpcap/current/include -I/opt/libxslt/current/include -I/usr/local/opt/llvm/include -I/opt/ncurses/current/include -I/opt/net-snmp/current/include -I/opt/openldap/current/include -I/usr/local/opt/sqlite/include -I/opt/tcl-tk/current/include"
-PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/opt/lapack/current/lib/pkgconfig:/opt/libxslt/current/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig:/opt/tcl-tk/current/lib/pkgconfig"
+PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/opt/lapack/current/lib/pkgconfig:/opt/libxslt/current/lib/pkgconfig:/opt/ncurses/current/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig:/opt/tcl-tk/current/lib/pkgconfig"
 DYLD_LIBRARY_PATH="/opt/oracle/instantclient"
 
