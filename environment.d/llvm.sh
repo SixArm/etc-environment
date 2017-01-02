@@ -1,7 +1,7 @@
 # LLVM compiler
 
 LLVM_MODULES="core jit native"
-LLVM_LDFLAGS="-L/usr/local/opt/llvm/lib"
+LLVM_LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
 LLVM_CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # Append
