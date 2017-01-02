@@ -15,11 +15,12 @@
 #     mkdir /opt/lapack
 #     ln -s /usr/local/opt/lapack /opt/lapack/current
 
-OPT="$OPT:/opt/lapack/current/bin"
+X="/opt/lapack/current"
+OPT="$OPT:$X/bin"
 
-LAPACK_CPPFLAGS="-I/usr/local/opt/lapack/include"
-LAPACK_LDFLAGS="-L/opt/lapack/current/lib"
-LAPACK_PKG_CONFIG_PATH="/usr/local/opt/lapack/lib/pkgconfig"
+LAPACK_CPPFLAGS="-I$X/include"
+LAPACK_LDFLAGS="-L/$X/lib"
+LAPACK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
 CPPFLAGS="$CPPFLAGS $LAPACK_CPPFLAGS"
 LDFLAGS="$LDFLAGS $LAPACK_LDFLAGS"

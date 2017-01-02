@@ -381,15 +381,72 @@ LC_ALL=en_US.UTF-8
 #     mkdir /opt/lapack
 #     ln -s /usr/local/opt/lapack /opt/lapack/current
 
-#OPT="$OPT:/opt/lapack/current/bin"
+X="/opt/lapack/current"
+#OPT="$OPT:$X/bin"
 
-LAPACK_CPPFLAGS="-I/usr/local/opt/lapack/include"
-LAPACK_LDFLAGS="-L/opt/lapack/current/lib"
-LAPACK_PKG_CONFIG_PATH="/usr/local/opt/lapack/lib/pkgconfig"
+LAPACK_CPPFLAGS="-I$X/include"
+LAPACK_LDFLAGS="-L/$X/lib"
+LAPACK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
 #CPPFLAGS="$CPPFLAGS $LAPACK_CPPFLAGS"
 #LDFLAGS="$LDFLAGS $LAPACK_LDFLAGS"
 #PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LAPACK_PKG_CONFIG_PATH"
+
+##########################################################################
+
+# libpcap
+#
+# If you use macOS and use brew, then your libpcap
+# is likely to be installed in a way that needs these:
+#
+#    LDFLAGS: -L/usr/local/opt/libpcap/lib
+#    CPPFLAGS: -I/usr/local/opt/libpcap/include
+#    PKG_CONFIG_PATH: /usr/local/opt/libpcap/lib/pkgconfig
+#
+# If you use cross-platform libpcap and cross-platform /etc/environment,
+# such as macOS with brew, and Linux, and this specific environment file,
+# then you will likely want to normalize the installation locations;
+# link the macOS location to our naming-convention location like this:
+#
+#     mkdir /opt/libpcap
+#     ln -s /usr/local/opt/libpcap /opt/libpcap/current
+
+X="/opt/libpcap/current"
+
+LIBPCAP_CPPFLAGS="-I$X/include"
+LIBPCAP_LDFLAGS="-L$X/lib"
+
+#CPPFLAGS="$CPPFLAGS $LIBPCAP_CPPFLAGS"
+#LDFLAGS="$LDFLAGS $LIBPCAP_LDFLAGS"
+
+##########################################################################
+
+# libxslt
+#
+# If you use macOS and use brew, then your libxslt
+# is likely to be installed in a way that needs these:
+#
+#    LDFLAGS: -L/usr/local/opt/libxslt/lib
+#    CPPFLAGS: -I/usr/local/opt/libxslt/include
+#    PKG_CONFIG_PATH: /usr/local/opt/libxslt/lib/pkgconfig
+#
+# If you use cross-platform libxslt and cross-platform /etc/environment,
+# such as macOS with brew, and Linux, and this specific environment file,
+# then you will likely want to normalize the installation locations;
+# link the macOS location to our naming-convention location like this:
+#
+#     mkdir /opt/libxslt
+#     ln -s /usr/local/opt/libxslt /opt/libxslt/current
+
+X="/opt/libxslt/current"
+
+LIBXSLT_CPPFLAGS="-I$X/include"
+LIBXSLT_LDFLAGS="-L$X/lib"
+LIBXSLT_PKG_CONFIG_PATH="$X/lib/pkgconfig"
+
+#CPPFLAGS="$CPPFLAGS $LIBXSLT_CPPFLAGS"
+#LDFLAGS="$LDFLAGS $LIBXSLT_LDFLAGS"
+#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LIBXSLT_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -640,8 +697,8 @@ PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin
 MANPATH="/usr/local/man:/usr/local/pgsql/man"
 LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:-L/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
 LD_RUN_PATH="/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
-LDFLAGS="-L/usr/local/pgsql/lib  -L/opt/gmp/current/lib -L/opt/jruby/current/lib -L/opt/lapack/current/lib -L/usr/local/opt/llvm/lib -L/opt/sqlite/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib"
-CPPFLAGS="-I/usr/local/opt/lapack/include -I/usr/local/opt/llvm/include -I/usr/local/opt/sqlite/include"
-PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/usr/local/opt/lapack/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig"
+LDFLAGS="-L/usr/local/pgsql/lib  -L/opt/gmp/current/lib -L/opt/jruby/current/lib -L//opt/lapack/current/lib -L/opt/libpcap/current/lib -L/opt/libxslt/current/lib -L/usr/local/opt/llvm/lib -L/opt/sqlite/current/lib -L/opt/subversion/current/lib -L/opt/yaml/current/lib"
+CPPFLAGS="-I/opt/lapack/current/include -I/opt/libpcap/current/include -I/opt/libxslt/current/include -I/usr/local/opt/llvm/include -I/usr/local/opt/sqlite/include"
+PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/opt/lapack/current/lib/pkgconfig:/opt/libxslt/current/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig"
 DYLD_LIBRARY_PATH="/opt/oracle/instantclient"
 
