@@ -382,12 +382,13 @@ LC_ALL=en_US.UTF-8
 #     ln -s /usr/local/opt/lapack /opt/lapack/current
 
 X="/opt/lapack/current"
-#OPT="$OPT:$X/bin"
 
+LAPACK_BIN="$X/bin"
 LAPACK_CPPFLAGS="-I$X/include"
 LAPACK_LDFLAGS="-L/$X/lib"
 LAPACK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
+#OPT="$OPT:$LAPACK_BIN"
 #CPPFLAGS="$CPPFLAGS $LAPACK_CPPFLAGS"
 #LDFLAGS="$LDFLAGS $LAPACK_LDFLAGS"
 #PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LAPACK_PKG_CONFIG_PATH"
@@ -774,6 +775,29 @@ TERM=xterm-256color
 
 ##########################################################################
 
+# texinfo
+#
+# If you use macOS and use brew, then your texinfo
+# is likely to be installed in a way that needs these:
+#
+#    LDFLAGS: -L/usr/local/opt/texinfo/lib
+#
+# If you use cross-platform texinfo and cross-platform /etc/environment,
+# such as macOS with brew, and Linux, and this specific environment file,
+# then you will likely want to normalize the installation locations;
+# link the macOS location to our naming-convention location like this:
+#
+#     mkdir /opt/texinfo
+#     ln -s /usr/local/opt/texinfo /opt/texinfo/current
+
+X="/opt/texinfo/current"
+
+TEXINFO_LDFLAGS="-L/$X/lib"
+
+#LDFLAGS="$LDFLAGS $TEXINFO_LDFLAGS"
+
+##########################################################################
+
 # UpdateCommand repositories
 
 #OPT=$OPT:/opt/updatecommand/update
@@ -809,7 +833,7 @@ PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin
 MANPATH="/usr/local/man:/usr/local/pgsql/man"
 LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:-L/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
 LD_RUN_PATH="/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
-LDFLAGS="-L/usr/local/pgsql/lib  -L/opt/gmp/current/lib -L/opt/jruby/current/lib -L//opt/lapack/current/lib -L/opt/libpcap/current/lib -L/opt/libxslt/current/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib -L/opt/ncurses/current/lib -L/opt/net-snmp/current/lib -L/opt/openldap/current/lib -L/opt/sqlite/current/lib -L/opt/subversion/current/lib -L//opt/tcl-tk/current/lib -L/opt/yaml/current/lib"
+LDFLAGS="-L/usr/local/pgsql/lib  -L/opt/gmp/current/lib -L/opt/jruby/current/lib -L//opt/lapack/current/lib -L/opt/libpcap/current/lib -L/opt/libxslt/current/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib -L/opt/ncurses/current/lib -L/opt/net-snmp/current/lib -L/opt/openldap/current/lib -L/opt/sqlite/current/lib -L/opt/subversion/current/lib -L//opt/tcl-tk/current/lib -L//opt/texinfo/current/lib -L/opt/yaml/current/lib"
 CPPFLAGS="-I/opt/lapack/current/include -I/opt/libpcap/current/include -I/opt/libxslt/current/include -I/usr/local/opt/llvm/include -I/opt/ncurses/current/include -I/opt/net-snmp/current/include -I/opt/openldap/current/include -I/usr/local/opt/sqlite/include -I/opt/tcl-tk/current/include"
 PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/opt/lapack/current/lib/pkgconfig:/opt/libxslt/current/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig:/opt/tcl-tk/current/lib/pkgconfig"
 DYLD_LIBRARY_PATH="/opt/oracle/instantclient"
