@@ -679,6 +679,11 @@ RUBYMINE_JDK=/opt/jdk/current
 
 ##########################################################################
 
+# Public repositories from GitHub <user>/<repo>
+
+#OPT=$OPT:/opt/gitalias/gitalias
+#OPT=$OPT:/opt/updatecommmand/update
+
 # SixArm.com repositories
 
 #OPT=$OPT:/opt/sixarm/gitconfig
@@ -702,7 +707,7 @@ RUBYMINE_JDK=/opt/jdk/current
 #OPT=$OPT:/opt/sixarm/sixarm_ssh_scripts
 #OPT=$OPT:/opt/sixarm/sixarm_strategem
 #OPT=$OPT:/opt/sixarm/sixarm_unix_shell_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_unix_update_scripts
+
 
 ##########################################################################
 
