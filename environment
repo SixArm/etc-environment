@@ -115,32 +115,32 @@ EC2_HOME=/opt/ec2-api-tools/current
 # Android
 
 ANDROID_HOME=/opt/android-sdk
-#PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 ##########################################################################
 
 # Amazon Web Services
 
-#OPT=$OPT:/opt/ec2-api-tools/current/bin
+OPT=$OPT:/opt/ec2-api-tools/current/bin
 
 ##########################################################################
 
 # Cassandra database
 
 CASSANDRA_HOME=~/cassandra
-#PATH="$PATH:$CASSANDRA_HOME/bin"
+PATH="$PATH:$CASSANDRA_HOME/bin"
 
 ##########################################################################
 
 # Elixir
 
-#PATH="$PATH:/opt/elixir/current/bin"
+PATH="$PATH:/opt/elixir/current/bin"
 
 ##########################################################################
 
 # Emacs
 
-#OPT="$OPT:/opt/emacs/current/bin"
+OPT="$OPT:/opt/emacs/current/bin"
 
 ##########################################################################
 
@@ -150,13 +150,13 @@ export FINDER="rg"
 
 # Games, in the typical Linux setup
 
-#PATH=$PATH:/usr/games
+PATH=$PATH:/usr/games
 
 ##########################################################################
 
 # GCC
 
-#OPT="$OPT:/opt/gcc/current/bin"
+OPT="$OPT:/opt/gcc/current/bin"
 
 ##########################################################################
 
@@ -164,15 +164,15 @@ export FINDER="rg"
 # Feel free to move it somewhere better for you.
 
 export GIT="git"
-#PATH="$PATH:/home/sources/git/mainline/bin"
+PATH="$PATH:/home/sources/git/mainline/bin"
 
 ##########################################################################
 
 # GMP: GNU Multiple Precision Arithmetic Library
 
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gmp/current/lib"
-#LD_RUN_PATH="$LD_RUN_PATH:/opt/gmp/current/lib"
-#LDFLAGS="$LDFLAGS -L/opt/gmp/current/lib"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/gmp/current/lib"
+LD_RUN_PATH="$LD_RUN_PATH:/opt/gmp/current/lib"
+LDFLAGS="$LDFLAGS -L/opt/gmp/current/lib"
 
 ##########################################################################
 
@@ -274,7 +274,7 @@ HISTTIMEFORMAT="%Y/%m/%d %T "
 
 # Java language
 
-#OPT="$OPT:/opt/java/jdk/current/bin"
+OPT="$OPT:/opt/java/jdk/current/bin"
 
 JAVA_HOME=/opt/java/jdk/current/bin/java
 JDK_HOME=/opt/java/jdk/current
@@ -283,7 +283,7 @@ JDK_HOME=/opt/java/jdk/current
 
 # JQ JSON processor
 
-#OPT="$OPT:/opt/jq"
+OPT="$OPT:/opt/jq"
 
 ##########################################################################
 
@@ -345,9 +345,9 @@ JRUBY_LD_RUN_PATH="/opt/ruby/jruby/current/lib"
 JRUBY_LDFLAGS="-L/opt/jruby/current/lib"
 
 # Append
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JRUBY_LD_LIBRARY_PATH"
-#LD_RUN_PATH="$LD_RUN_PATH:$JRUBY_LD_RUN_PATH"
-#LDFLAGS="$LDFLAGS $JRUBY_LDFLAGS"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$JRUBY_LD_LIBRARY_PATH"
+LD_RUN_PATH="$LD_RUN_PATH:$JRUBY_LD_RUN_PATH"
+LDFLAGS="$LDFLAGS $JRUBY_LDFLAGS"
 
 ##########################################################################
 
@@ -388,10 +388,10 @@ LAPACK_CPPFLAGS="-I$X/include"
 LAPACK_LDFLAGS="-L/$X/lib"
 LAPACK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
-#OPT="$OPT:$LAPACK_BIN"
-#CPPFLAGS="$CPPFLAGS $LAPACK_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $LAPACK_LDFLAGS"
-#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LAPACK_PKG_CONFIG_PATH"
+OPT="$OPT:$LAPACK_BIN"
+CPPFLAGS="$CPPFLAGS $LAPACK_CPPFLAGS"
+LDFLAGS="$LDFLAGS $LAPACK_LDFLAGS"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LAPACK_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -416,8 +416,8 @@ X="/opt/libpcap/current"
 LIBPCAP_CPPFLAGS="-I$X/include"
 LIBPCAP_LDFLAGS="-L$X/lib"
 
-#CPPFLAGS="$CPPFLAGS $LIBPCAP_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $LIBPCAP_LDFLAGS"
+CPPFLAGS="$CPPFLAGS $LIBPCAP_CPPFLAGS"
+LDFLAGS="$LDFLAGS $LIBPCAP_LDFLAGS"
 
 ##########################################################################
 
@@ -444,9 +444,9 @@ LIBXSLT_CPPFLAGS="-I$X/include"
 LIBXSLT_LDFLAGS="-L$X/lib"
 LIBXSLT_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
-#CPPFLAGS="$CPPFLAGS $LIBXSLT_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $LIBXSLT_LDFLAGS"
-#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LIBXSLT_PKG_CONFIG_PATH"
+CPPFLAGS="$CPPFLAGS $LIBXSLT_CPPFLAGS"
+LDFLAGS="$LDFLAGS $LIBXSLT_LDFLAGS"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$LIBXSLT_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -457,14 +457,14 @@ LLVM_LDFLAGS="-L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib"
 LLVM_CPPFLAGS="-I/usr/local/opt/llvm/include"
 
 # Append
-#CPPFLAGS="$CPPFLAGS $LLVM_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $LLVM_LDFLAGS"
+CPPFLAGS="$CPPFLAGS $LLVM_CPPFLAGS"
+LDFLAGS="$LDFLAGS $LLVM_LDFLAGS"
 
 ##########################################################################
 
 # Nagios monitoring software
 
-#PATH="$PATH:/usr/lib/nagios/plugins"
+PATH="$PATH:/usr/lib/nagios/plugins"
 
 ##########################################################################
 
@@ -491,9 +491,9 @@ NCURSES_CPPFLAGS="-I$X/include"
 NCURSES_LDFLAGS="-L$X/lib"
 NCURSES_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
-#CPPFLAGS="$CPPFLAGS $NCURSES_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $NCURSES_LDFLAGS"
-#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$NCURSES_PKG_CONFIG_PATH"
+CPPFLAGS="$CPPFLAGS $NCURSES_CPPFLAGS"
+LDFLAGS="$LDFLAGS $NCURSES_LDFLAGS"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$NCURSES_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -518,14 +518,14 @@ X="/opt/net-snmp/current"
 NET_SNMP_CPPFLAGS="-I$X/include"
 NET_SNMP_LDFLAGS="-L$X/lib"
 
-#CPPFLAGS="$CPPFLAGS $NET_SNMP_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $NET_SNMP_LDFLAGS"
+CPPFLAGS="$CPPFLAGS $NET_SNMP_CPPFLAGS"
+LDFLAGS="$LDFLAGS $NET_SNMP_LDFLAGS"
 
 ##########################################################################
 
 # Node JS
 
-#OPT="$OPT:/opt/node/current/bin"
+OPT="$OPT:/opt/node/current/bin"
 
 ##########################################################################
 
@@ -550,8 +550,8 @@ X="/opt/openldap/current"
 OPENLDAP_CPPFLAGS="-I$X/include"
 OPENLDAP_LDFLAGS="-L$X/lib"
 
-#CPPFLAGS="$CPPFLAGS $OPENLDAP_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $OPENLDAP_LDFLAGS"
+CPPFLAGS="$CPPFLAGS $OPENLDAP_CPPFLAGS"
+LDFLAGS="$LDFLAGS $OPENLDAP_LDFLAGS"
 
 ##########################################################################
 
@@ -559,34 +559,34 @@ OPENLDAP_LDFLAGS="-L$X/lib"
 
 ORACLE_HOME=/opt/oracle/instantclient
 NLS_LANG=AMERICAN_AMERICA.UTF8
-#DYLD_LIBRARY_PATH=$ORACLE_HOME
+DYLD_LIBRARY_PATH=$ORACLE_HOME
 
 ##########################################################################
 
 # Packer
 
-#OPT="$OPT:/opt/packer"
+OPT="$OPT:/opt/packer"
 
 ##########################################################################
 
 # Postgresql
 
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/pgsql/lib"
-#LD_RUN_PATH="$LD_RUN_PATH:/usr/local/pgsql/lib"
-#LDFLAGS="-L/usr/local/pgsql/lib $LDFLAGS"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/pgsql/lib"
+LD_RUN_PATH="$LD_RUN_PATH:/usr/local/pgsql/lib"
+LDFLAGS="-L/usr/local/pgsql/lib $LDFLAGS"
 
 ##########################################################################
 
 # Postgres.app database on OSX
 
-#PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
 
 ##########################################################################
 
 # Postgres database
 
-#PATH="$PATH:/usr/local/pgsql/bin"
-#MANPATH="$MANPATH:/usr/local/pgsql/man"
+PATH="$PATH:/usr/local/pgsql/bin"
+MANPATH="$MANPATH:/usr/local/pgsql/man"
 
 ##########################################################################
 
@@ -612,9 +612,9 @@ QT5_CPPFLAGS="-I$X/include"
 QT5_LDFLAGS="-L$X/lib"
 QT5_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
-#CPPFLAGS="$CPPFLAGS $QT5_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $QT5_LDFLAGS"
-#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$QT5_PKG_CONFIG_PATH"
+CPPFLAGS="$CPPFLAGS $QT5_CPPFLAGS"
+LDFLAGS="$LDFLAGS $QT5_LDFLAGS"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$QT5_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -626,7 +626,7 @@ RBENV_ROOT=~/.rbenv
 
 # Redis database
 
-#OPT=$OPT:/opt/redis/current/bin
+OPT=$OPT:/opt/redis/current/bin
 
 ##########################################################################
 
@@ -655,8 +655,8 @@ RBENV_ROOT=~/.rbenv
 #
 #   ln -sfn /opt/rubygems/mri/2.1.5 /opt/rubygems/current
 #
-#OPT="$OPT:/opt/ruby/current/bin"
-#OPT="$OPT:/opt/rubygems/current/bin"
+OPT="$OPT:/opt/ruby/current/bin"
+OPT="$OPT:/opt/rubygems/current/bin"
 
 GEM_HOME="/opt/rubygems/current"
 GEM_PATH="/opt/rubygems/current"
@@ -667,7 +667,7 @@ RUBYOPT='-rubygems -rpsych'
 
 # RubyMine IDE, which runs on Java
 
-#OPT="$OPT:/opt/rubymine/current/bin"
+OPT="$OPT:/opt/rubymine/current/bin"
 
 RUBYMINE_JDK=/opt/jdk/current
 
@@ -675,38 +675,33 @@ RUBYMINE_JDK=/opt/jdk/current
 
 # SBT
 
-#OPT="$OPT:/opt/sbt/current/bin"
+OPT="$OPT:/opt/sbt/current/bin"
 
 ##########################################################################
 
-# Public repositories from GitHub <user>/<repo>
-
-#OPT=$OPT:/opt/gitalias/gitalias
-#OPT=$OPT:/opt/updatecommmand/update
-
 # SixArm.com repositories
 
-#OPT=$OPT:/opt/sixarm/gitconfig
-#OPT=$OPT:/opt/sixarm/gpg-decrypt
-#OPT=$OPT:/opt/sixarm/gpg-encrypt
-#OPT=$OPT:/opt/sixarm/log-file-cleaning
-#OPT=$OPT:/opt/sixarm/rsync-mirror
-#OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
-#OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_gem_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_html_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_htx
-#OPT=$OPT:/opt/sixarm/sixarm_markdown_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_mysql_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_postgresql_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_ruby_gem_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_ruby_gemforge
-#OPT=$OPT:/opt/sixarm/sixarm_shell_random_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_shell_statistics
-#OPT=$OPT:/opt/sixarm/sixarm_ssh_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_strategem
-#OPT=$OPT:/opt/sixarm/sixarm_unix_shell_scripts
+OPT=$OPT:/opt/sixarm/gitconfig
+OPT=$OPT:/opt/sixarm/gpg-decrypt
+OPT=$OPT:/opt/sixarm/gpg-encrypt
+OPT=$OPT:/opt/sixarm/log-file-cleaning
+OPT=$OPT:/opt/sixarm/rsync-mirror
+OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
+OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
+OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
+OPT=$OPT:/opt/sixarm/sixarm_gem_scripts
+OPT=$OPT:/opt/sixarm/sixarm_html_scripts
+OPT=$OPT:/opt/sixarm/sixarm_htx
+OPT=$OPT:/opt/sixarm/sixarm_markdown_scripts
+OPT=$OPT:/opt/sixarm/sixarm_mysql_scripts
+OPT=$OPT:/opt/sixarm/sixarm_postgresql_scripts
+OPT=$OPT:/opt/sixarm/sixarm_ruby_gem_scripts
+OPT=$OPT:/opt/sixarm/sixarm_ruby_gemforge
+OPT=$OPT:/opt/sixarm/sixarm_shell_random_scripts
+OPT=$OPT:/opt/sixarm/sixarm_shell_statistics
+OPT=$OPT:/opt/sixarm/sixarm_ssh_scripts
+OPT=$OPT:/opt/sixarm/sixarm_strategem
+OPT=$OPT:/opt/sixarm/sixarm_unix_shell_scripts
 
 
 ##########################################################################
@@ -728,7 +723,7 @@ RUBYMINE_JDK=/opt/jdk/current
 #     mkdir /opt/sqlite
 #     ln -s /usr/local/opt/sqlite /opt/sqlite/current
 
-#OPT="$OPT:/opt/sqlite/current/bin"
+OPT="$OPT:/opt/sqlite/current/bin"
 
 SQLITE_CPPFLAGS="-I/usr/local/opt/sqlite/include"
 SQLITE_LD_LIBRARY_PATH="/opt/sqlite/current/lib"
@@ -736,26 +731,26 @@ SQLITE_LD_RUN_PATH="/opt/sqlite/current/lib"
 SQLITE_LDFLAGS="-L/opt/sqlite/current/lib"
 SQLITE_PKG_CONFIG_PATH="/usr/local/opt/sqlite/lib/pkgconfig"
 
-#CPPFLAGS="$CPPFLAGS $SQLITE_CPPFLAGS"
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$SQLITE_LDFLAGS"
-#LD_RUN_PATH="$LD_RUN_PATH:$SQLITE_LD_RUN_PATH"
-#LDFLAGS="$LDFLAGS $SQLITE_LDFLAGS"
-#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$SQLITE_PKG_CONFIG_PATH"
+CPPFLAGS="$CPPFLAGS $SQLITE_CPPFLAGS"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$SQLITE_LDFLAGS"
+LD_RUN_PATH="$LD_RUN_PATH:$SQLITE_LD_RUN_PATH"
+LDFLAGS="$LDFLAGS $SQLITE_LDFLAGS"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$SQLITE_PKG_CONFIG_PATH"
 
 ##########################################################################
 
 # Sublime editor
 
-#OPT=$OPT:/opt/sublime/current
+OPT=$OPT:/opt/sublime/current
 
 ##########################################################################
 
 # Subversion source code management
 
-#OPT="$OPT:/opt/subversion/current/bin"
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/subversion/current/lib"
-#LD_RUN_PATH="$LD_RUN_PATH:/opt/subversion/current/lib"
-#LDFLAGS="$LDFLAGS -L/opt/subversion/current/lib"
+OPT="$OPT:/opt/subversion/current/bin"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/subversion/current/lib"
+LD_RUN_PATH="$LD_RUN_PATH:/opt/subversion/current/lib"
+LDFLAGS="$LDFLAGS -L/opt/subversion/current/lib"
 
 ##########################################################################
 
@@ -783,10 +778,10 @@ TCL_TK_CPPFLAGS="-I$X/include"
 TCL_TK_LDFLAGS="-L/$X/lib"
 TCL_TK_PKG_CONFIG_PATH="$X/lib/pkgconfig"
 
-#OPT="$OPT:$TCL_TK_BIN"
-#CPPFLAGS="$CPPFLAGS $TCL_TK_CPPFLAGS"
-#LDFLAGS="$LDFLAGS $TCL_TK_LDFLAGS"
-#PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$TCL_TK_PKG_CONFIG_PATH"
+OPT="$OPT:$TCL_TK_BIN"
+CPPFLAGS="$CPPFLAGS $TCL_TK_CPPFLAGS"
+LDFLAGS="$LDFLAGS $TCL_TK_LDFLAGS"
+PKG_CONFIG_PATH="$PKG_CONFIG_PATH:$TCL_TK_PKG_CONFIG_PATH"
 
 ##########################################################################
 
@@ -798,7 +793,7 @@ TERM=xterm-256color
 
 # Terraform by Hasicorp
 
-#OPT=$OPT:/opt/terraform/bin
+OPT=$OPT:/opt/terraform/bin
 
 ##########################################################################
 
@@ -821,42 +816,42 @@ X="/opt/texinfo/current"
 
 TEXINFO_LDFLAGS="-L/$X/lib"
 
-#LDFLAGS="$LDFLAGS $TEXINFO_LDFLAGS"
+LDFLAGS="$LDFLAGS $TEXINFO_LDFLAGS"
 
 ##########################################################################
 
 # UpdateCommand repositories
 
-#OPT=$OPT:/opt/updatecommand/update
+OPT=$OPT:/opt/updatecommand/update
 
 ##########################################################################
 
 # Vim editor
 
-#OPT=$OPT:/opt/vim/current/bin
+OPT=$OPT:/opt/vim/current/bin
 
 ##########################################################################
 
 # X11 X Window System
 
-#OPT="$OPT:/opt/X11/bin"
+OPT="$OPT:/opt/X11/bin"
 
 ##########################################################################
 
 # YAML: Yet Another Markup Language
 
-#LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/yaml/current/lib"
-#LD_RUN_PATH="$LD_RUN_PATH:/opt/yaml/current/lib"
-#LDFLAGS="$LDFLAGS -L/opt/yaml/current/lib"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/yaml/current/lib"
+LD_RUN_PATH="$LD_RUN_PATH:/opt/yaml/current/lib"
+LDFLAGS="$LDFLAGS -L/opt/yaml/current/lib"
 
 ##########################################################################
 
 # Conclusion. Put any final steps here.
 
-#PATH="$OPT:$PATH"
+PATH="$OPT:$PATH"
 
-OPT="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sixarm/sixarm_unix_update_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin"
-PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sixarm/sixarm_unix_update_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/Users/joel/cassandra/bin:/opt/elixir/current/bin:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/pgsql/bin"
+OPT="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin"
+PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/Users/joel/cassandra/bin:/opt/elixir/current/bin:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/pgsql/bin"
 MANPATH="/usr/local/man:/usr/local/pgsql/man"
 LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:-L/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
 LD_RUN_PATH="/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
