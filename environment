@@ -696,7 +696,7 @@ RUBYMINE_JDK=/opt/jdk/current
 #OPT=$OPT:/opt/sixarm/sixarm_mysql_scripts
 #OPT=$OPT:/opt/sixarm/sixarm_postgresql_scripts
 #OPT=$OPT:/opt/sixarm/sixarm_ruby_gem_scripts
-#OPT=$OPT:/opt/sixarm/sixarm_ruby_gemforge
+#OPT=$OPT:/opt/sixarm/sixarm_ruby_gemforge/bin
 #OPT=$OPT:/opt/sixarm/sixarm_shell_random_scripts
 #OPT=$OPT:/opt/sixarm/sixarm_shell_statistics
 #OPT=$OPT:/opt/sixarm/sixarm_ssh_scripts
@@ -838,6 +838,64 @@ TEXINFO_LDFLAGS="-L/$X/lib"
 
 ##########################################################################
 
+## 
+# XDG Base Directory Specification
+#
+# The XDG Base Directory Specification is based on the following concepts:
+# 
+#   * $XDG_DATA_HOME
+#   * $XDG_DATA_DIRS
+#   * $XDG_CONFIG_HOME
+#   * $XDG_CONFIG_DIRS
+#   * $XDG_CACHE_HOME
+#   * $XDG_RUNTIME_DIR
+#
+# Environment variables:
+#
+#   * $XDG_CONFIG_HOME defines the base directory relative to
+#     which user-specific configuration files should be stored. 
+#     Default: $HOME/.config
+#
+#   * $XDG_CONFIG_DIRS defines the preference-ordered set of
+#     base directories to search for configuration files in 
+#     addition to the $XDG_CONFIG_HOME base directory. 
+#     Directories should be seperated with a colon ':'.
+#     Default: /etc/xdg
+#
+#   * $XDG_DATA_HOME defines the base directory relative to
+#     which user-specific data files should be stored. 
+#     Default: $HOME/.local/share
+#
+#   * $XDG_DATA_DIRS defines the preference-ordered set of 
+#     base directories to search for data files in addition 
+#     to the $XDG_DATA_HOME base directory. 
+#     Default: /usr/local/share/:/usr/share/
+#
+#   * $XDG_CACHE_HOME defines the base directory relative to
+#     which user-specific non-essential data files should be stored.
+#     Default: $HOME/.cache
+#
+#   * $XDG_RUNTIME_DIR defines the base directory relative to
+#     which user-specific non-essential runtime files and other file
+#     objects (such as sockets, named pipes, ...) should be stored.
+#     The directory MUST be owned by the user and mode MUST be 0700.
+#     Default: If $XDG_RUNTIME_DIR is not set applications should
+#     fall back to a replacement directory with similar capabilities
+#     and print a warning message.
+#
+# Path details:
+#
+#   * All paths set in these environment variables must be absolute.
+#
+#   * If an implementation encounters a relative path in any of these
+#     variables it should consider the path invalid and ignore it.
+#
+#   * Paths must be separated with a colon ':'.
+#
+##
+
+##########################################################################
+
 # YAML: Yet Another Markup Language
 
 #LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/opt/yaml/current/lib"
@@ -850,8 +908,8 @@ TEXINFO_LDFLAGS="-L/$X/lib"
 
 #PATH="$OPT:$PATH"
 
-OPT="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sixarm/sixarm_unix_update_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin"
-PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sixarm/sixarm_unix_update_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/Users/joel/cassandra/bin:/opt/elixir/current/bin:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/pgsql/bin"
+OPT="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge/bin:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sixarm/sixarm_unix_update_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin"
+PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/rsync-mirror:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts:/opt/sixarm/sixarm_ruby_gemforge/bin:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sixarm/sixarm_unix_update_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/Users/joel/cassandra/bin:/opt/elixir/current/bin:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/pgsql/bin"
 MANPATH="/usr/local/man:/usr/local/pgsql/man"
 LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:-L/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
 LD_RUN_PATH="/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
