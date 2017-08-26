@@ -9,6 +9,7 @@ OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
 OPT=$OPT:/opt/sixarm/sixarm_gem_scripts
+OPT=$OPT:/opt/sixarm/sixarm_git_scripts/bin
 OPT=$OPT:/opt/sixarm/sixarm_html_scripts
 OPT=$OPT:/opt/sixarm/sixarm_htx
 OPT=$OPT:/opt/sixarm/sixarm_markdown_scripts
