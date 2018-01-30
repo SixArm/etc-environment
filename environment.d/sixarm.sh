@@ -1,6 +1,7 @@
 # SixArm.com repositories
 
 OPT=$OPT:/opt/sixarm/airport-ssid
+OPT=$OPT:/opt/sixarm/column-tsv
 OPT=$OPT:/opt/sixarm/gitconfig
 OPT=$OPT:/opt/sixarm/gpg-decrypt
 OPT=$OPT:/opt/sixarm/gpg-encrypt
