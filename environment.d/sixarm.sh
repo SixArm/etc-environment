@@ -26,4 +26,5 @@ OPT=$OPT:/opt/sixarm/sixarm_shell_random_scripts
 OPT=$OPT:/opt/sixarm/sixarm_shell_statistics
 OPT=$OPT:/opt/sixarm/sixarm_ssh_scripts
 OPT=$OPT:/opt/sixarm/sixarm_strategem
+OPT=$OPT:/opt/sixarm/sixarm_tmux_scripts
 OPT=$OPT:/opt/sixarm/sixarm_unix_shell_scripts
