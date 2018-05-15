@@ -1,6 +1,6 @@
 # JRuby Java Runtime
 
-JRUBY_HOME=/opt/ruby/jruby/current
+JRUBY_HOME=/opt/jruby/current
 
 # Options:
 #
@@ -51,8 +51,8 @@ JRUBY_HOME=/opt/ruby/jruby/current
 #
 JRUBY_OPTS="--1.9 -J-Xms1024m -J-Xmx1024m -J-XX:ThreadStackSize=2048 -J-XX:+CMSClassUnloadingEnabled -J-XX:+UseConcMarkSweepGC -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1"
 
-JRUBY_LD_LIBRARY_PATH="/opt/ruby/jruby/current/lib"
-JRUBY_LD_RUN_PATH="/opt/ruby/jruby/current/lib"
+JRUBY_LD_LIBRARY_PATH="/opt/jruby/current/lib"
+JRUBY_LD_RUN_PATH="/opt/jruby/current/lib"
 JRUBY_LDFLAGS="-L/opt/jruby/current/lib"
 
 # Append

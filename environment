@@ -295,7 +295,7 @@ JDK_HOME=/opt/java/jdk/current
 
 # JRuby Java Runtime
 
-JRUBY_HOME=/opt/ruby/jruby/current
+JRUBY_HOME=/opt/jruby/current
 
 # Options:
 #
@@ -346,8 +346,8 @@ JRUBY_HOME=/opt/ruby/jruby/current
 #
 JRUBY_OPTS="--1.9 -J-Xms1024m -J-Xmx1024m -J-XX:ThreadStackSize=2048 -J-XX:+CMSClassUnloadingEnabled -J-XX:+UseConcMarkSweepGC -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1"
 
-JRUBY_LD_LIBRARY_PATH="/opt/ruby/jruby/current/lib"
-JRUBY_LD_RUN_PATH="/opt/ruby/jruby/current/lib"
+JRUBY_LD_LIBRARY_PATH="/opt/jruby/current/lib"
+JRUBY_LD_RUN_PATH="/opt/jruby/current/lib"
 JRUBY_LDFLAGS="-L/opt/jruby/current/lib"
 
 # Append
@@ -647,31 +647,17 @@ RBENV_ROOT=~/.rbenv
 #
 # Example:
 #
-#   /opt/ruby/mri/2.1.5
-#   /opt/ruby/jruby/1.7.16.1
-#   /opt/ruby/rbx/2.3.0
+#   /opt/ruby/2.5.1
+#   /opt/jruby/9.1.17.0
+#   /opt/rbx/3.103
 #
 # We link the preferred vm and version this way:
 #
-#   ln -sfn /opt/ruby/mri/2.1.5 /opt/ruby/current
-#
-# We put our Ruby gems in a similar kind of setup:
-#
-#   /opt/rubygems/mri/2.1.5
-#   /opt/rubygems/jruby/1.7.16.1
-#   /opt/rubgemsy/rbx/2.3.0
-#
-# We link the preferred vm and version this way:
-#
-#   ln -sfn /opt/rubygems/mri/2.1.5 /opt/rubygems/current
+#   ln -sfn /opt/ruby/2.5.1 /opt/ruby/current
 #
 #OPT="$OPT:/opt/ruby/current/bin"
-#OPT="$OPT:/opt/rubygems/current/bin"
-
-GEM_HOME="/opt/rubygems/current"
-GEM_PATH="/opt/rubygems/current"
-
-RUBYOPT='-rubygems -rpsych'
+#OPT="$OPT:/opt/jruby/current/bin"
+#OPT="$OPT:/opt/rbx/current/bin"
 
 ##########################################################################
 
@@ -931,11 +917,11 @@ TEXINFO_LDFLAGS="-L/$X/lib"
 
 #PATH="$OPT:$PATH"
 
-OPT="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/gracenote_api_scripts:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/airport-ssid:/opt/sixarm/change-case/bin:/opt/sixarm/column-tsv:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/pmset-scripts:/opt/sixarm/rsync-mirror:/opt/sixarm/ssid-powerful:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_git_scripts/bin:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts/bin:/opt/sixarm/sixarm_ruby_gemforge/bin:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_tmux_scripts:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/opt/zidplan/zid-shell"
-PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/gracenote_api_scripts:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/rubygems/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/airport-ssid:/opt/sixarm/change-case/bin:/opt/sixarm/column-tsv:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/pmset-scripts:/opt/sixarm/rsync-mirror:/opt/sixarm/ssid-powerful:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_git_scripts/bin:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts/bin:/opt/sixarm/sixarm_ruby_gemforge/bin:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_tmux_scripts:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/opt/zidplan/zid-shell:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/Users/joel/cassandra/bin:/opt/elixir/current/bin:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/pgsql/bin"
+OPT="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/gracenote_api_scripts:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/jruby/current/bin:/opt/rbx/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/airport-ssid:/opt/sixarm/change-case/bin:/opt/sixarm/column-tsv:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/pmset-scripts:/opt/sixarm/rsync-mirror:/opt/sixarm/ssid-powerful:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_git_scripts/bin:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts/bin:/opt/sixarm/sixarm_ruby_gemforge/bin:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_tmux_scripts:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/opt/zidplan/zid-shell"
+PATH="/opt/ec2-api-tools/current/bin:/opt/emacs/current/bin:/opt/gcc/current/bin:/opt/gracenote_api_scripts:/opt/java/jdk/current/bin:/opt/jq:/opt/lapack/current/bin:/opt/node/current/bin:/opt/packer:/opt/redis/current/bin:/opt/ruby/current/bin:/opt/jruby/current/bin:/opt/rbx/current/bin:/opt/rubymine/current/bin:/opt/sbt/current/bin:/opt/sixarm/airport-ssid:/opt/sixarm/change-case/bin:/opt/sixarm/column-tsv:/opt/sixarm/gitconfig:/opt/sixarm/gpg-decrypt:/opt/sixarm/gpg-encrypt:/opt/sixarm/log-file-cleaning:/opt/sixarm/pmset-scripts:/opt/sixarm/rsync-mirror:/opt/sixarm/ssid-powerful:/opt/sixarm/sixarm_apt_scripts:/opt/sixarm/sixarm_dpkg_builder:/opt/sixarm/sixarm_dpkg_scripts:/opt/sixarm/sixarm_gem_scripts:/opt/sixarm/sixarm_git_scripts/bin:/opt/sixarm/sixarm_html_scripts:/opt/sixarm/sixarm_htx:/opt/sixarm/sixarm_markdown_scripts:/opt/sixarm/sixarm_mysql_scripts:/opt/sixarm/sixarm_postgresql_scripts:/opt/sixarm/sixarm_ruby_gem_scripts/bin:/opt/sixarm/sixarm_ruby_gemforge/bin:/opt/sixarm/sixarm_shell_random_scripts:/opt/sixarm/sixarm_shell_statistics:/opt/sixarm/sixarm_ssh_scripts:/opt/sixarm/sixarm_strategem:/opt/sixarm/sixarm_tmux_scripts:/opt/sixarm/sixarm_unix_shell_scripts:/opt/sqlite/current/bin:/opt/sublime/current:/opt/subversion/current/bin:/opt/tcl-tk/current/bin:/opt/terraform/bin:/opt/updatecommand/update:/opt/vim/current/bin:/opt/X11/bin:/opt/zidplan/zid-shell:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/Users/joel/cassandra/bin:/opt/elixir/current/bin:/usr/games:/home/sources/git/mainline/bin:/Users/joel/go/bin:/usr/lib/nagios/plugins:/Applications/Postgres.app/Contents/Versions/9.4/bin:/usr/local/pgsql/bin"
 MANPATH="/usr/local/man:/usr/local/pgsql/man"
-LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:-L/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
-LD_RUN_PATH="/opt/gmp/current/lib:/opt/ruby/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
+LD_LIBRARY_PATH="/usr/lib32:/opt/gmp/current/lib:/opt/jruby/current/lib:/usr/local/pgsql/lib:-L/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
+LD_RUN_PATH="/opt/gmp/current/lib:/opt/jruby/current/lib:/usr/local/pgsql/lib:/opt/sqlite/current/lib:/opt/subversion/current/lib:/opt/yaml/current/lib"
 LDFLAGS="-L/usr/local/pgsql/lib  -L/opt/gmp/current/lib -L/opt/jruby/current/lib -L//opt/lapack/current/lib -L/opt/libpcap/current/lib -L/opt/libxslt/current/lib -L/usr/local/opt/llvm/lib -Wl,-rpath,/usr/local/opt/llvm/lib -L/opt/ncurses/current/lib -L/opt/net-snmp/current/lib -L/opt/openldap/current/lib -L/opt/qt5/current/lib -L/opt/sqlite/current/lib -L/opt/subversion/current/lib -L//opt/tcl-tk/current/lib -L//opt/texinfo/current/lib -L/opt/yaml/current/lib"
 CPPFLAGS="-I/opt/lapack/current/include -I/opt/libpcap/current/include -I/opt/libxslt/current/include -I/usr/local/opt/llvm/include -I/opt/ncurses/current/include -I/opt/net-snmp/current/include -I/opt/openldap/current/include -I/opt/qt5/current/include -I/usr/local/opt/sqlite/include -I/opt/tcl-tk/current/include"
 PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:/opt/lapack/current/lib/pkgconfig:/opt/libxslt/current/lib/pkgconfig:/opt/ncurses/current/lib/pkgconfig:/opt/qt5/current/lib/pkgconfig:/usr/local/opt/sqlite/lib/pkgconfig:/opt/tcl-tk/current/lib/pkgconfig"
