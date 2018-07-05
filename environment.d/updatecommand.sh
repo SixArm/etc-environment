@@ -1,3 +1,3 @@
 # UpdateCommand repositories
 
-OPT=$OPT:/opt/updatecommand/update
+OPT=$OPT:/opt/updatecommand/update/bin
