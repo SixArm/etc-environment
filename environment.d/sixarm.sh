@@ -11,6 +11,7 @@ OPT=$OPT:/opt/sixarm/pmset-scripts
 OPT=$OPT:/opt/sixarm/rsync-mirror
 OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssid-powerful
+OPT=$OPT:/opt/sixarm/tmux-start
 OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
