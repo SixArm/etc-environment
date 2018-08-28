@@ -8,6 +8,7 @@ OPT=$OPT:/opt/sixarm/gpg-decrypt
 OPT=$OPT:/opt/sixarm/gpg-encrypt
 OPT=$OPT:/opt/sixarm/log-file-cleaning
 OPT=$OPT:/opt/sixarm/pmset-scripts
+OPT=$OPT:/opt/sixarm/port-to-process
 OPT=$OPT:/opt/sixarm/rsync-mirror
 OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssid-powerful
