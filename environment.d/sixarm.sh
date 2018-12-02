@@ -3,6 +3,7 @@
 OPT=$OPT:/opt/sixarm/airport-ssid
 OPT=$OPT:/opt/sixarm/change-case/bin
 OPT=$OPT:/opt/sixarm/column-tsv
+OPT=$OPT:/opt/sixarm/gettimeofday-localtime
 OPT=$OPT:/opt/sixarm/gitconfig
 OPT=$OPT:/opt/sixarm/gpg-decrypt
 OPT=$OPT:/opt/sixarm/gpg-encrypt
@@ -14,6 +15,7 @@ OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssid-powerful
 OPT=$OPT:/opt/sixarm/tmux-start
 OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
+OPT=$OPT:/opt/sixarm/sixarm_aws_cli
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_scripts
 OPT=$OPT:/opt/sixarm/sixarm_gem_scripts
