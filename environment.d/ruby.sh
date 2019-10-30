@@ -5,13 +5,13 @@
 #
 # Example:
 #
-#   /opt/ruby/2.5.1
+#   /opt/ruby/2.6.3
 #   /opt/jruby/9.1.17.0
 #   /opt/rbx/3.103
 #
 # We link the preferred vm and version this way:
 #
-#   ln -sfn /opt/ruby/2.5.1 /opt/ruby/current
+#   ln -sfn /opt/ruby/2.6.3 /opt/ruby/current
 #
 OPT="$OPT:/opt/ruby/current/bin"
 OPT="$OPT:/opt/jruby/current/bin"
