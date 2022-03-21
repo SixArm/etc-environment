@@ -8,6 +8,7 @@ OPT=$OPT:/opt/sixarm/gitconfig
 OPT=$OPT:/opt/sixarm/gpg-decrypt
 OPT=$OPT:/opt/sixarm/gpg-encrypt
 OPT=$OPT:/opt/sixarm/log-file-cleaning
+OPT=$OPT:/opt/sixarm/pandoc-from-markdown-into-pdf-with-favorites
 OPT=$OPT:/opt/sixarm/pmset-scripts
 OPT=$OPT:/opt/sixarm/port-to-process
 OPT=$OPT:/opt/sixarm/rsync-mirror
