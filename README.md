@@ -1,4 +1,4 @@
-# Unix » <br> environment configuration
+# /etc/environment system configuration
 
 Our Unix systems use `/etc/environment` to set paths, languages, etc.
 
