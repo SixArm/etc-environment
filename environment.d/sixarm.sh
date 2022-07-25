@@ -18,6 +18,7 @@ OPT=$OPT:/opt/sixarm/sixarm-password
 OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssid-powerful
 OPT=$OPT:/opt/sixarm/tmux-start
+OPT=$OPT:/opt/sixarm/tmux-start-rails
 OPT=$OPT:/opt/sixarm/sixarm_apt_scripts
 OPT=$OPT:/opt/sixarm/sixarm_aws_cli
 OPT=$OPT:/opt/sixarm/sixarm_dpkg_builder
