@@ -14,6 +14,7 @@ OPT=$OPT:/opt/sixarm/port-to-process
 OPT=$OPT:/opt/sixarm/rsync-mirror
 OPT=$OPT:/opt/sixarm/random-ascii
 OPT=$OPT:/opt/sixarm/random-hex
+OPT=$OPT:/opt/sixarm/rename-to-date-time-slug
 OPT=$OPT:/opt/sixarm/sixarm-password
 OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssid-powerful
