@@ -14,4 +14,4 @@ See our related repos:
   * `sixarm_bash_etc_files` for bash shell e.g. `/etc/bashrc`.
   * `sixarm_zsh_etc_files` for zsh shell e.g. `/etc/zshrc`.
   * `sixarm_unix_etc_apt` for apt package manager e.g. `/etc/apt/sources`.
-  * `sixarm_git_gitconfig` for git version conntrol e.g. `/etc/git/config`.
+  * <https://github.com/sixarm/gitconfig-settings> for git version conntrol e.g. `/etc/git/config`.
