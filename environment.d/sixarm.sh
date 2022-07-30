@@ -10,6 +10,7 @@ OPT=$OPT:/opt/sixarm/dpkg-scripts
 OPT=$OPT:/opt/sixarm/gem-scripts
 OPT=$OPT:/opt/sixarm/gettimeofday-localtime
 OPT=$OPT:/opt/sixarm/git-scripts/bin
+OPT=$OPT:/opt/sixarm/github-api-scripts/bin
 OPT=$OPT:/opt/sixarm/gitconfig
 OPT=$OPT:/opt/sixarm/gpg-decrypt
 OPT=$OPT:/opt/sixarm/gpg-encrypt
