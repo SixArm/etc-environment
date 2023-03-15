@@ -5,6 +5,7 @@ OPT=$OPT:/opt/sixarm/apt-scripts
 OPT=$OPT:/opt/sixarm/aws-cli
 OPT=$OPT:/opt/sixarm/change-case/bin
 OPT=$OPT:/opt/sixarm/column-tsv
+OPT=$OPT:/opt/sixarm/curl-chatgpt
 OPT=$OPT:/opt/sixarm/dpkg-builder
 OPT=$OPT:/opt/sixarm/dpkg-scripts
 OPT=$OPT:/opt/sixarm/gem-scripts
