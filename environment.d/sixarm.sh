@@ -16,6 +16,7 @@ OPT=$OPT:/opt/sixarm/github-api-scripts/bin
 OPT=$OPT:/opt/sixarm/gitconfig
 OPT=$OPT:/opt/sixarm/gpg-decrypt
 OPT=$OPT:/opt/sixarm/gpg-encrypt
+OPT=$OPT:/opt/sixarm/html-div-data-chatgpt-prompt
 OPT=$OPT:/opt/sixarm/html-scripts
 OPT=$OPT:/opt/sixarm/htx
 OPT=$OPT:/opt/sixarm/log-file-cleaning
