@@ -10,6 +10,7 @@ OPT=$OPT:/opt/sixarm/dpkg-builder
 OPT=$OPT:/opt/sixarm/dpkg-scripts
 OPT=$OPT:/opt/sixarm/gem-scripts
 OPT=$OPT:/opt/sixarm/gettimeofday-localtime
+OPT=$OPT:/opt/sixarm/git-mv-file-name-to-new-subdirectory-index
 OPT=$OPT:/opt/sixarm/git-scripts/bin
 OPT=$OPT:/opt/sixarm/github-api-scripts/bin
 OPT=$OPT:/opt/sixarm/gitconfig
