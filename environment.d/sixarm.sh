@@ -3,6 +3,7 @@
 OPT=$OPT:/opt/sixarm/airport-ssid
 OPT=$OPT:/opt/sixarm/apt-scripts
 OPT=$OPT:/opt/sixarm/aws-cli
+OPT=$OPT:/opt/sixarm/book-binder
 OPT=$OPT:/opt/sixarm/change-case/bin
 OPT=$OPT:/opt/sixarm/column-tsv
 OPT=$OPT:/opt/sixarm/curl-chatgpt/bin
