@@ -43,6 +43,7 @@ OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssh-scripts
 OPT=$OPT:/opt/sixarm/ssid-powerful
 OPT=$OPT:/opt/sixarm/strategem
+OPT=$OPT:/opt/sixarm/sveltekit-create
 OPT=$OPT:/opt/sixarm/symlink-index-md-to-readme-md/bin
 OPT=$OPT:/opt/sixarm/tmux-scripts
 OPT=$OPT:/opt/sixarm/tmux-start
