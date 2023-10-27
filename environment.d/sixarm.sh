@@ -25,6 +25,7 @@ OPT=$OPT:/opt/sixarm/log-file-cleaning
 OPT=$OPT:/opt/sixarm/markdown-text-to-link-urls
 OPT=$OPT:/opt/sixarm/markdown-tools
 OPT=$OPT:/opt/sixarm/mysql-scripts
+OPT=$OPT:/opt/sixarm/pandoc-from-markdown-to-epub
 OPT=$OPT:/opt/sixarm/pandoc-from-markdown-to-pdf
 OPT=$OPT:/opt/sixarm/pmset-scripts
 OPT=$OPT:/opt/sixarm/port-to-process
