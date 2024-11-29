@@ -29,6 +29,7 @@ OPT=$OPT:/opt/sixarm/mysql-scripts
 OPT=$OPT:/opt/sixarm/pandoc-from-markdown-to-epub
 OPT=$OPT:/opt/sixarm/pandoc-from-markdown-to-pdf
 OPT=$OPT:/opt/sixarm/pmset-scripts
+OPT=$OPT:/opt/sixarm/plantuml-open/bin
 OPT=$OPT:/opt/sixarm/port-to-process
 OPT=$OPT:/opt/sixarm/postgresql-scripts
 OPT=$OPT:/opt/sixarm/random-ascii
