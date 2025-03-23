@@ -1,0 +1,16 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "GROOVY_HOME",
+        "JAVA_HOME",
+        "JDK_HOME",
+        "JRUBY_HOME",
+        "JRUBY_LDFLAGS",
+        "RBENV_ROOT"
+    ],
+    "ignoreWords": [],
+    "import": []
+}
