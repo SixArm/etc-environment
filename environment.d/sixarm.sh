@@ -46,6 +46,7 @@ OPT=$OPT:/opt/sixarm/shell-random-scripts
 OPT=$OPT:/opt/sixarm/shell-statistics
 OPT=$OPT:/opt/sixarm/sixarm-password
 OPT=$OPT:/opt/sixarm/sixarm-posix-shell-functions
+OPT=$OPT:/opt/sixarm/slug
 OPT=$OPT:/opt/sixarm/ssh-keygen-pro
 OPT=$OPT:/opt/sixarm/ssh-scripts
 OPT=$OPT:/opt/sixarm/ssid-powerful
