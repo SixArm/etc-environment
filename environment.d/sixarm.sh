@@ -53,6 +53,7 @@ OPT=$OPT:/opt/sixarm/ssid-powerful
 OPT=$OPT:/opt/sixarm/strategem
 OPT=$OPT:/opt/sixarm/sveltekit-create
 OPT=$OPT:/opt/sixarm/symlink-index-md-to-readme-md/bin
+OPT=$OPT:/opt/sixarm/translate-using-ollama-muse-glimmer
 OPT=$OPT:/opt/sixarm/tmux-scripts
 OPT=$OPT:/opt/sixarm/tmux-start
 OPT=$OPT:/opt/sixarm/tmux-start-rails
